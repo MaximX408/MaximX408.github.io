@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ПРОСТО САЙТ</title>
+    <meta name="description" content="ПРОСТО САЙТ">
+    
+    <!-- Подключение CSS -->
+    <style>
+        /* Сброс стандартных отступов */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f4f4f4;
+        }
+        
+        /* Шапка сайта */
+        header {
+            background-color: #2c3e50;
+            color: white;
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+        
+        .nav-links {
+            list-style: none;
+            display: flex;
+            position: relative;
+        }
+        
+        .nav-links > li {
+            margin-left: 2rem;
+            position: relative;
+        }
+        
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s;
+            display: block;
+            padding: 0.5rem 0;
+        }
+        
+        .nav-links a:hover {
+            color: #3498db;
+        }
+        
+        /* Выпадающие меню */
+        .dropdown {
+            position: relative;
+        }
+        
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-color: #2c3e50;
+            min-width: 200px;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+            z-index: 1;
+            border-radius: 0 0 4px 4px;
+            overflow: hidden;
+        }
+        
+        .dropdown-content li {
+            margin: 0;
+        }
+        
+        .dropdown-content a {
+            padding: 12px 16px;
+            color: white;
+            text-decoration: none;
+            display: block;
+            transition: background-color 0.3s;
+            border-bottom: 1px solid #34495e;
+        }
+        
+        .dropdown-content a:hover {
+            background-color: #3498db;
+            color: white;
+        }
+        
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+        
+        /* Стрелка для выпадающих меню */
+        .dropdown > a::after {
+            content: "▼";
+            font-size: 0.7em;
+            margin-left: 5px;
+        }
+        
+        /* Основной контент */
+        main {
+            padding: 2rem 0;
+            min-height: calc(100vh - 200px);
+        }
+        
+        /* Секции */
+        section {
+            margin-bottom: 2rem;
+            padding: 2rem;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        /* Подвал */
+        footer {
+            background-color: #34495e;
+            color: white;
+            text-align: center;
+            padding: 1rem 0;
+            margin-top: 2rem;
+        }
+        
+        /* Адаптивность */
+        @media (max-width: 768px) {
+            .nav-links {
+                flex-direction: column;
+            }
+            
+            .nav-links > li {
+                margin: 0.5rem 0;
+            }
+            
+            .dropdown-content {
+                position: static;
+                display: none;
+                margin-left: 1rem;
+            }
+            
+            .dropdown:hover .dropdown-content {
+display: block;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Шапка сайта -->
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">ПРОСТО САЙТ</div>
+                <ul class="nav-links">
+                    <li><a href="index.html">Главная</a></li>
+                    
+                    <li class="dropdown">
+                        <a href="#geography">География</a>
+                        <ul class="dropdown-content">
+                            <li><a href="#" target="_blank">Почему луна влияет на приливы и отливы?</a></li>
+                            <li><a href="#" target="_blank">~</a></li>
+                            <li><a href="#" target="_blank">~</a></li>
+                            <li><a href="#" target="_blank">~</a></li>
+                        </ul>
+                    </li>
+                    
+                    <li class="dropdown">
+                        <a href="#Biology">Биология</a>
+                        <ul class="dropdown-content">
+                            <li><a href="#" target="_blank">~</a></li>
+                            <li><a href="#" target="_blank">~</a></li>
+                            <li><a href="#" target="_blank">~</a></li>
+                            <li><a href="#" target="_blank">~</a></li>
+                        </ul>
+                    </li>
+                    
+                    <li class="dropdown">
+                        <a href="#History">История</a>
+                        <ul class="dropdown-content">
+                            <li><a href="#" target="_blank">~</a></li>
+                            <li><a href="#" target="_blank">~</a></li>
+                            <li><a href="#" target="_blank">~</a></li>
+                            <li><a href="#" target="_blank">~</a></li>
+                        </ul>
+                    </li>
+                      <li class="dropdown">
+                        <a href="#Physics">Физика</a>
+                        <ul class="dropdown-content">
+                            <li><a href="#" target="_blank">~</a></li>
+                            <li><a href="#" target="_blank">~</a></li>
+                            <li><a href="#" target="_blank">~</a></li>
+                            <li><a href="#" target="_blank">~</a></li>
+                        </ul>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Основное содержимое -->
+    <main>
+        <div class="container">
+            <!-- Герой секция -->
+            <section id="home">
+                <h1>Добро пожаловать на ПРОСТО САЙТ</h1>
+                <p>Здесь есть доклады для 5 класса (Можно брать но указывайте авторство)
+                :::::::::::::::::::::::</p>
+            </section>
+
+            <!-- Секция о нас -->
+            <section id="about">
+                <h2>О сайте</h2>
+                <p>Этот сайт для моих проэктов по Географии, Биологии, Истории и Физике
+               ::::::::::::::::::::::: </p>
+            </section>
+
+                      <!-- Контактная секция -->
+            <section id="contact">
+                <h2>Контакты</h2>
+                <p><a src="https://github.com/MaximX408">GitHub</a>
+                  <a src="mailto:yaroslavkolosov21072015@gmail.com?subject=Привет&body=">Почта</a>
+               ::::::::::::::::::::::: </p>
+            </section>
+          
+            <!-- Секция с инструкцией -->
+            <section id="services">
+                <h2>Доклады</h2>
+                <div class="services-grid">
+                    <p><a href="google.com">Почему луна влияет на приливы и отливы</a>
+                  """""""""""""""""""""""
+                  :::::::::::::::::::::::</p>
+                </div>
+            </section>
+
+
+        </div>
+    </main>
+
+    <!-- Подвал -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 MaximX408. Лицензия CCO 1.0.</p>
+        </div>
+</footer>
+
+    <!-- Подключение JavaScript -->
+    <script>
+        // Базовый JavaScript код
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log('Сайт загружен!');
+            
+            // Пример обработки навигации
+            const navLinks = document.querySelectorAll('.nav-links > li > a:not(.dropdown-content a)');
+            navLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    const href = this.getAttribute('href');
+                    if (href.startsWith('#')) {
+                        e.preventDefault();
+                        const targetId = this.getAttribute('href');
+                        const targetSection = document.querySelector(targetId);
+                        targetSection.scrollIntoView({ behavior: 'smooth' });
+                    }
+                });
+            });
+            
+            // Закрытие выпадающих меню при клике вне их области
+            document.addEventListener('click', function(e) {
+                const dropdowns = document.querySelectorAll('.dropdown');
+                dropdowns.forEach(dropdown => {
+                    if (!dropdown.contains(e.target)) {
+                        dropdown.querySelector('.dropdown-content').style.display = 'none';
+                    }
+                });
+            });
+            
+            // Для мобильных устройств - открытие/закрытие по клику
+            if (window.innerWidth <= 768) {
+                const dropdownToggles = document.querySelectorAll('.dropdown > a');
+                dropdownToggles.forEach(toggle => {
+                    toggle.addEventListener('click', function(e) {
+                        e.preventDefault();
+                        const dropdownContent = this.nextElementSibling;
+                        const isVisible = dropdownContent.style.display === 'block';
+                        
+                        // Скрыть все выпадающие меню
+                        document.querySelectorAll('.dropdown-content').forEach(item => {
+                            item.style.display = 'none';
+                        });
+                        
+                        // Показать/скрыть текущее меню
+                        dropdownContent.style.display = isVisible ? 'none' : 'block';
+                    });
+                });
+            }
+        });
+    </script>
+</body>
+</html>
