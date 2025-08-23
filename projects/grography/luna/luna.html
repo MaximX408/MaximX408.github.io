@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>ПРОСТО САЙТ</title>
+<meta name="description" content="ПРОСТО САЙТ" />
+
+<!-- CSS стили -->
+<style>
+  /* Общий сброс и базовые стили */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f4f4;
+  }
+
+  /* Шапка сайта */
+  header {
+    background-color: #2c3e50;
+    color: white;
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+
+  .container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+
+  /* Навигационные ссылки */
+  .nav-links {
+    list-style: none;
+    display: flex;
+    align-items: center;
+  }
+
+  .nav-links > li {
+    position: relative;
+    margin-left: 2rem;
+  }
+
+  .nav-links a {
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    display: block;
+    transition: color 0.3s;
+  }
+
+  .nav-links a:hover {
+    color: #3498db;
+  }
+
+  /* Выпадающее меню */
+  .dropdown {
+    position: relative;
+  }
+
+  .dropdown > a::after {
+    content: " ▼";
+    font-size: 0.7em;
+  }
+
+  .dropdown-content {
+    display: none; /* по умолчанию скрыто */
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #2c3e50;
+    min-width: 200px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    border-radius: 0 0 4px 4px;
+    z-index: 1000;
+  }
+
+  .dropdown-content li {
+    width: 100%;
+  }
+
+  .dropdown-content a {
+    padding: 12px 16px;
+    color: white;
+    text-decoration: none;
+    display: block;
+    border-bottom: 1px solid #34495e;
+  }
+
+  .dropdown-content a:hover {
+    background-color: #3498db;
+  }
+
+  /* Показывать при hover */
+  @media (hover: hover) {
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+  }
+
+  /* Адаптивность для мобильных устройств */
+  @media(max-width: 768px) {
+    .nav-links {
+      flex-direction: column;
+      width: 100%;
+    }
+
+    .nav-links > li {
+      margin: 0.5rem 0;
+    }
+
+    /* Сделать dropdown по клику */
+    .dropdown > a::after {
+      content: "";
+    }
+
+    .dropdown .dropdown-content {
+      position: static;
+      display: none;
+      width: 100%;
+    }
+  }
+
+  /* Основной контент */
+  main {
+    padding: 2rem 0;
+    min-height: calc(100vh - 200px);
+  }
+
+  section {
+    margin-bottom: 2rem;
+    padding: 2rem;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  }
+
+  /* Подвал */
+  footer {
+    background-color: #34495e;
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+    margin-top: 2rem;
+  }
+</style>
+</head>
+<body>
+
+<!-- Шапка сайта -->
+<header>
+  <div class="container">
+    <nav>
+      <div class="logo">ПРОСТО САЙТ</div>
+      <ul class="nav-links">
+        <li><a href="index.html">Главная</a></li>
+        <li class="dropdown">
+          <a href="#geography">География</a>
+          <ul class="dropdown-content">
+            <li><a href="#" target="_blank">Почему луна влияет на приливы и отливы?</a></li>
+            <li><a href="#" target="_blank">~</a></li>
+            <li><a href="#" target="_blank">~</a></li>
+            <li><a href="#" target="_blank">~</a></li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a href="#Biology">Биология</a>
+          <ul class="dropdown-content">
+            <li><a href="#" target="_blank">~</a></li>
+            <li><a href="#" target="_blank">~</a></li>
+            <li><a href="#" target="_blank">~</a></li>
+            <li><a href="#" target="_blank">~</a></li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a href="#History">История</a>
+          <ul class="dropdown-content">
+            <li><a href="#" target="_blank">~</a></li>
+            <li><a href="#" target="_blank">~</a></li>
+            <li><a href="#" target="_blank">~</a></li>
+            <li><a href="#" target="_blank">~</a></li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a href="#Physics">Физика</a>
+          <ul class="dropdown-content">
+            <li><a href="#" target="_blank">~</a></li>
+            <li><a href="#" target="_blank">~</a></li>
+            <li><a href="#" target="_blank">~</a></li>
+            <li><a href="#" target="_blank">~</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<!-- Основное содержимое -->
+<main>
+  <div class="container">
+    <!-- О нас -->
+    <section id="about">
+      <h2>О сайте</h2>
+      <p><h1>Влияние Луны на приливы и отливы</h1>
+<p>Приливы и отливы — это регулярные изменения уровня морской воды, которые происходят под воздействием гравитационных сил. Основным фактором, влияющим на эти процессы, является Луна.</p>
+
+<h2>Как Луна влияет на приливы и отливы</h2>
+<p>Гравитационное притяжение Луны вызывает деформацию поверхности воды в океанах и морях. Когда Луна находится над определенной областью, её гравитационная сила тянет воду, вызывая прилив. В противоположной стороне Земли происходит отлив, так как центробежная сила, возникающая при вращении Земли, тянет воду в противоположную сторону.</p>
+
+<h2>Механизм возникновения приливов</h2>
+<ul>
+<li><strong>Приливной бугор</strong>: образуется под Луной, где вода поднимается вверх.</li>
+<li><strong>Отлив</strong>: происходит на противоположной стороне Земли, где вода опускается.</li>
+<li><strong>Двойные приливы</strong>: в большинстве регионов наблюдается два прилива и два отлива в сутки.</li>
+</ul>
+
+<h2>Факторы, влияющие на силу приливов</h2>
+<p>На интенсивность и характер приливов влияют такие факторы, как:</p>
+<ul>
+<li>Фаза Луны (новолуние, полнолуние)</li>
+<li>Географическая особенность береговой линии</li>
+<li>Расстояние между Землей и Луной</li>
+<li>Положение Солнца относительно Луны</li>
+</ul>
+
+<h2>Заключение</h2>
+<p>Луна играет ключевую роль в формировании приливных явлений на Земле. Понимание этого процесса важно для мореплавателей,</p>
+    </section>
+      </div>
+    </section>
+  </div>
+</main>
+
+<!-- Подвал -->
+<footer>
+  <div class="container">
+    <p>&copy; 2025 MaximX408. Лицензия CCO 1.0.</p>
+  </div>
+</footer>
+
+<!-- JS для dropdown -->
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    // Для мобильных — клик по пунктам dropdown
+    if (window.innerWidth <= 768) {
+      document.querySelectorAll('.dropdown > a').forEach(function(link) {
+        link.addEventListener('click', function(e) {
+          e.preventDefault();
+          const dropdownMenu = this.nextElementSibling;
+          const isShown = dropdownMenu.style.display === 'block';
+
+          // Скрыть все dropdown
+          document.querySelectorAll('.dropdown .dropdown-content').forEach(function(menu) {
+            menu.style.display = 'none';
+          });
+          // Показать/скрыть текущий
+          dropdownMenu.style.display = isShown ? 'none' : 'block';
+        });
+      });
+    }
+
+    // Закрытие dropdown при клике вне
+    document.addEventListener('click', function(e) {
+      document.querySelectorAll('.dropdown .dropdown-content').forEach(function(menu) {
+        if (!menu.parentElement.contains(e.target)) {
+          menu.style.display = 'none';
+        }
+      });
+    });
+  });
+</script>
+
+</body>
+</html>
