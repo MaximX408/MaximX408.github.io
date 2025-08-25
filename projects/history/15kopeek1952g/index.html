@@ -1,1 +1,300 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>ПРОСТО САЙТ</title>
+<meta name="description" content="ПРОСТО САЙТ" />
 
+<!-- CSS стили -->
+<style>
+  /* Общий сброс и базовые стили */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f4f4;
+  }
+
+  /* Шапка сайта */
+  header {
+    background-color: #2c3e50;
+    color: white;
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+
+  .container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+
+  /* Навигационные ссылки */
+  .nav-links {
+    list-style: none;
+    display: flex;
+    align-items: center;
+  }
+
+  .nav-links > li {
+    position: relative;
+    margin-left: 2rem;
+  }
+
+  .nav-links a {
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    display: block;
+    transition: color 0.3s;
+  }
+
+  .nav-links a:hover {
+    color: #3498db;
+  }
+
+  /* Выпадающее меню */
+  .dropdown {
+    position: relative;
+  }
+
+  .dropdown > a::after {
+    content: " ▼";
+    font-size: 0.7em;
+  }
+
+  .dropdown-content {
+    display: none; /* по умолчанию скрыто */
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #2c3e50;
+    min-width: 200px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    border-radius: 0 0 4px 4px;
+    z-index: 1000;
+  }
+
+  .dropdown-content li {
+    width: 100%;
+  }
+
+  .dropdown-content a {
+    padding: 12px 16px;
+    color: white;
+    text-decoration: none;
+    display: block;
+    border-bottom: 1px solid #34495e;
+  }
+
+  .dropdown-content a:hover {
+    background-color: #3498db;
+  }
+
+  /* Показывать при hover */
+  @media (hover: hover) {
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+  }
+
+  /* Адаптивность для мобильных устройств */
+  @media(max-width: 768px) {
+    .nav-links {
+      flex-direction: column;
+      width: 100%;
+    }
+
+    .nav-links > li {
+      margin: 0.5rem 0;
+    }
+
+    /* Сделать dropdown по клику */
+    .dropdown > a::after {
+      content: "";
+    }
+
+    .dropdown .dropdown-content {
+      position: static;
+      display: none;
+      width: 100%;
+    }
+  }
+
+  /* Основной контент */
+  main {
+    padding: 2rem 0;
+    min-height: calc(100vh - 200px);
+  }
+
+  section {
+    margin-bottom: 2rem;
+    padding: 2rem;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  }
+
+  /* Подвал */
+  footer {
+    background-color: #34495e;
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+    margin-top: 2rem;
+  }
+</style>
+</head>
+<body>
+
+<!-- Шапка сайта -->
+<header>
+  <div class="container">
+    <nav>
+      <div class="logo">ПРОСТО САЙТ</div>
+      <ul class="nav-links">
+        <li><a href="https://maximx408.github.io/">Главная</a></li>
+        <li class="dropdown">
+          <a href="#geography">География</a>
+          <ul class="dropdown-content">
+            <li><a href="projects/grography/luna/luna.html" target="_blank">Почему луна влияет на приливы и отливы?</a></li>
+            <li><a href="#" target="_blank">~</a></li>
+            <li><a href="#" target="_blank">~</a></li>
+            <li><a href="#" target="_blank">~</a></li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a href="#Biology">Биология</a>
+          <ul class="dropdown-content">
+            <li><a href="#" target="_blank">~</a></li>
+            <li><a href="#" target="_blank">~</a></li>
+            <li><a href="#" target="_blank">~</a></li>
+            <li><a href="#" target="_blank">~</a></li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a href="#History">История</a>
+          <ul class="dropdown-content">
+            <li><a href="#" target="_blank">~</a></li>
+            <li><a href="#" target="_blank">~</a></li>
+            <li><a href="#" target="_blank">~</a></li>
+            <li><a href="#" target="_blank">~</a></li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a href="#Physics">Физика</a>
+          <ul class="dropdown-content">
+            <li><a href="#" target="_blank">~</a></li>
+            <li><a href="#" target="_blank">~</a></li>
+            <li><a href="#" target="_blank">~</a></li>
+            <li><a href="#" target="_blank">~</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<!-- Основное содержимое -->
+<main>
+  <div class="container">
+    <!-- О нас -->
+    <section id="about">
+      <h2>О сайте</h2>
+      <p>   <h1>Монета 15 копеек 1962 года</h1>
+    <p>Монета 15 копеек 1962 года - это интересный предмет, который имеет свое место в истории Советского Союза. Она выпущена в период, когда страна проходила через важные изменения и реформы, которые затрагивали экономику и денежную систему.</p>
+
+    <h2>Исторический контекст</h2>
+    <p>1962 год был временем больших перемен в Советском Союзе. В стране начали внедрять новые экономические идеи, чтобы улучшить жизнь людей. В это время была проведена денежная реформа, которая касалась всех советских граждан. Монета в 15 копеек стала частью этой реформы и была нужна для повседневных расчетов.</p>
+
+    <h2>Описание монеты</h2>
+    <p>Монета 15 копеек 1962 года выполнена из медно-никелевого сплава, что делает её прочной и устойчивой к повреждениям. Она имеет диаметр 23 миллиметра и весит 5 граммов, что делает её удобной для ношения в кармане или кошельке.</p>
+    
+    <h2>Дизайн монеты</h2>
+    <p>На лицевой стороне (аверсе) монеты изображён Государственный герб СССР. Герб символизирует единство всех народов страны и показывает, что они вместе строят своё будущее. На обратной стороне (реверсе) указаны номинал монеты и год её выпуска. Дизайн монеты простой, но в то же время выразительный.</p>
+
+    <h2>Тираж и распространение</h2>
+    <p>Монета 15 копеек 1962 года была выпущена в большом количестве, чтобы удовлетворить потребности населения. Точные данные о том, сколько монет было выпущено, могут варьироваться, но известно, что они широко использовались в повседневной жизни людей.</p>
+
+    <h2>Нумизматическая ценность</h2>
+    <p>Для коллекционеров эта монета может представлять интерес. Её ценность зависит от состояния монеты, редкости и спроса на рынке. Некоторые монеты могут стоить дороже, особенно если они сохранили свои первоначальные качества, такие как блеск и отсутствие повреждений.</p>
+
+    <h2>Интересные факты</h2>
+    <ul>
+        <li>Монета 15 копеек 1962 года часто встречается на рынках и у коллекционеров.</li>
+        <li>Монета стала частью истории и памятником времени, когда происходили важные изменения в стране.</li>
+        <li>Некоторые люди собирают монеты именно этого года, чтобы запомнить те времена.</li>
+    </ul>
+
+    <h2>Заключение</h2>
+    <p>Монета 15 копеек 1962 года - это не просто денежная единица. Она отражает жизнь и культуру своего времени. Для многих людей она может быть связана с воспоминаниями о прошлом. Коллекционеры и историки ценят такие монеты как часть богатого наследия Советского Союза. Эта монета напоминает нам о том, как менялся мир вокруг нас и как мы с ним жили.</p></p>
+    </section>
+  </div>
+</main>
+
+<!-- Подвал -->
+<footer>
+  <div class="container">
+    <p>&copy; 2025 MaximX408. Лицензия CCO 1.0.</p>
+  </div>
+</footer>
+
+<!-- JS для dropdown -->
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    // Для мобильных — клик по пунктам dropdown
+    if (window.innerWidth <= 768) {
+      document.querySelectorAll('.dropdown > a').forEach(function(link) {
+        link.addEventListener('click', function(e) {
+          e.preventDefault();
+          const dropdownMenu = this.nextElementSibling;
+          const isShown = dropdownMenu.style.display === 'block';
+
+          // Скрыть все dropdown
+          document.querySelectorAll('.dropdown .dropdown-content').forEach(function(menu) {
+            menu.style.display = 'none';
+          });
+          // Показать/скрыть текущий
+          dropdownMenu.style.display = isShown ? 'none' : 'block';
+        });
+      });
+    }
+
+    // Закрытие dropdown при клике вне
+    document.addEventListener('click', function(e) {
+      document.querySelectorAll('.dropdown .dropdown-content').forEach(function(menu) {
+        if (!menu.parentElement.contains(e.target)) {
+          menu.style.display = 'none';
+        }
+      });
+    });
+  });
+</script>
+
+</body>
+</html>
