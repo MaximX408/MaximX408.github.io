@@ -1,1 +1,322 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>ПРОСТО САЙТ</title>
+<meta name="description" content="ПРОСТО САЙТ" />
 
+<!-- CSS стили -->
+<style>
+  /* Общий сброс и базовые стили */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f4f4;
+  }
+
+  /* Шапка сайта */
+  header {
+    background-color: #2c3e50;
+    color: white;
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+
+  .container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+
+  /* Навигационные ссылки */
+  .nav-links {
+    list-style: none;
+    display: flex;
+    align-items: center;
+  }
+
+  .nav-links > li {
+    position: relative;
+    margin-left: 2rem;
+  }
+
+  .nav-links a {
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    display: block;
+    transition: color 0.3s;
+  }
+
+  .nav-links a:hover {
+    color: #3498db;
+  }
+
+  /* Выпадающее меню */
+  .dropdown {
+    position: relative;
+  }
+
+  .dropdown > a::after {
+    content: " ▼";
+    font-size: 0.7em;
+  }
+
+  .dropdown-content {
+    display: none; /* по умолчанию скрыто */
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #2c3e50;
+    min-width: 200px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    border-radius: 0 0 4px 4px;
+    z-index: 1000;
+  }
+
+  .dropdown-content li {
+    width: 100%;
+  }
+
+  .dropdown-content a {
+    padding: 12px 16px;
+    color: white;
+    text-decoration: none;
+    display: block;
+    border-bottom: 1px solid #34495e;
+  }
+
+  .dropdown-content a:hover {
+    background-color: #3498db;
+  }
+
+  /* Показывать при hover */
+  @media (hover: hover) {
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+  }
+
+  /* Адаптивность для мобильных устройств */
+  @media(max-width: 768px) {
+    .nav-links {
+      flex-direction: column;
+      width: 100%;
+    }
+
+    .nav-links > li {
+      margin: 0.5rem 0;
+    }
+
+    /* Сделать dropdown по клику */
+    .dropdown > a::after {
+      content: "";
+    }
+
+    .dropdown .dropdown-content {
+      position: static;
+      display: none;
+      width: 100%;
+    }
+  }
+
+  /* Основной контент */
+  main {
+    padding: 2rem 0;
+    min-height: calc(100vh - 200px);
+  }
+
+  section {
+    margin-bottom: 2rem;
+    padding: 2rem;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  }
+
+  /* Подвал */
+  footer {
+    background-color: #34495e;
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+    margin-top: 2rem;
+  }
+</style>
+</head>
+<body>
+
+<!-- Шапка сайта -->
+<header>
+  <div class="container">
+    <nav>
+      <div class="logo">ПРОСТО САЙТ</div>
+      <ul class="nav-links">
+        <li><a href="https://maximx408.github.io/">Главная</a></li>
+        <li class="dropdown">
+          <a href="#geography">География</a>
+          <ul class="dropdown-content">
+            <li><a href="maximx408.GitHub.io/projects/geography/Luna/index.html" target="_blank">Почему луна влияет на приливы и отливы?</a></li>
+            <li><a href="#" target="_blank">~</a></li>
+            <li><a href="#" target="_blank">~</a></li>
+            <li><a href="#" target="_blank">~</a></li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a href="#Biology">Биология</a>
+          <ul class="dropdown-content">
+            <li><a href="#" target="_blank">~</a></li>
+            <li><a href="#" target="_blank">~</a></li>
+            <li><a href="#" target="_blank">~</a></li>
+            <li><a href="#" target="_blank">~</a></li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a href="#History">История</a>
+          <ul class="dropdown-content">
+            <li><a href="https://maximx408.GitHub.io/projects/history/15kopeek1962g/index.html" target="_blank">15 копеек 1962 г</a></li>
+            <li><a href="https://maximx408.GitHub.io/projects/history/Set/index.html" target="_blank">Сэт</a></li>
+            <li><a href="#" target="_blank">~</a></li>
+            <li><a href="#" target="_blank">~</a></li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a href="#Physics">Физика</a>
+          <ul class="dropdown-content">
+            <li><a href="#" target="_blank">~</a></li>
+            <li><a href="#" target="_blank">~</a></li>
+            <li><a href="#" target="_blank">~</a></li>
+            <li><a href="#" target="_blank">~</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<!-- Основное содержимое -->
+<main>
+  <div class="container">
+    <!-- О нас -->
+    <section id="about">
+      <p><h1>Сет (Сетх) — бог хаоса и пустыни в древнеегипетской мифологии</h1>
+
+    <h2>Оглавление</h2>
+    <div>
+        <div><a href="#intro">Введение</a></div>
+        <div><a href="#appearance">Внешний вид и символы</a></div>
+        <div><a href="#mythology">Мифология и роль</a></div>
+        <div><a href="#cult">Культ и почитание</a></div>
+        <div><a href="#evolution">Эволюция образа</a></div>
+        <div><a href="#conclusion">Заключение</a></div>
+    </div>
+
+    <h2 id="intro">Введение</h2>
+    <p>Сет (Сетх, Сутех) — один из самых древних и противоречивых богов в пантеоне Древнего Египта. Изначально почитавшийся как бог-защитник Ра и покровитель фараонов, со временем он стал ассоциироваться с хаосом, разрушением и злом, прежде всего из-за мифа об убийстве своего брата Осириса.</p>
+
+    <h2 id="appearance">Внешний вид и символы</h2>
+    <p>Сета чаще всего изображали в антропоморфном облике с головой загадочного животного, которое египтологи называют «животное Сета». Это существо имело длинный изогнутый нос, прямоугольные уши и раздвоенный на конце хвост. Иногда его изображали полностью в виде этого животного.</p>
+    <p>Главными символами бога были:</p>
+    <div>Жезл Уас: Символ власти, который он делил с другими богами.</div>
+    <div>Анх: Знак жизни.</div>
+    <div>Сет-животное: Его тотемное существо.</div>
+    <p>Священными животными и явлениями, ассоциирующимися с Сетом, были свинья, антилопа, крокодил, гиппопотам и такие опасные явления, как пустынные бури и грозы.</p>
+
+    <h2 id="mythology">Мифология и роль</h2>
+    <p>Роль Сета в египетской мифологии сложна и неоднозначна.</p>
+
+    <h3>Отрицательные черты</h3>
+    <div>Убийство Осириса: Самым известным мифом является коварное убийство Сетом своего брата Осириса, чтобы захватить его трон. Это сделало его олицетворением предательства и насилия.</div>
+    <div>Вражда с Гором: После убийства Осириса Сет вступил в многолетнюю войну за престол с сыном Осириса, Гором. Эта борьба символизировала конфликт между хаосом (Сет) и порядком (Гор).</div>
+
+    <h3>Положительные и защитные черты</h3>
+    <div>Защитник Ра: Несмотря на негативные черты, Сет был необходимой силой. Каждую ночь он вставал на корме солнечной барки бога Ра и сражался с апопом — гигантским змеем хаоса, угрожавшим поглотить солнце. Без силы и ярости Сета мировой порядок мог быть разрушен.</div>
+    <div>Бог чужеземцев: Он также считался покровителем далеких стран и чужеземцев, что было логично для бога, связанного с негостеприимной пустыней.</div>
+
+    <h2 id="cult">Культ и почитание</h2>
+    <p>Несмотря на свою дурную репутацию, у Сета были свои центры почитания, особенно в Верхнем Египте. Главным культовым центром был город Омбос (Небет).</p>
+    <p>Некоторые фараоны, особенно в периоды Второго переходного периода (когда Египтом правили гиксосы) и во времена Рамессидов (XIX и XX династии), почитали Сета как своего личного покровителя. Фараон Сети I и его сын Рамсес II даже имели имена, производные от имени бога Сета.</p>
+
+    <h2 id="evolution">Эволюция образа</h2>
+    <p>Восприятие Сета drastically менялось на протяжении истории Древнего Египта:</p>
+    <div>Раннее царство: Почитался как могущественный и грозный, но уважаемый бог.</div>
+    <div>Эпоха Пирамид: Начал ассоциироваться с силами зла после укрепления культа Осириса.</div>
+    <div>Поздний период: Его образ стал почти полностью отрицательным. Сета стали демонизировать, а его статуи и изображения уничтожались.</div>
+    <div>В эллинистическую эпоху Сета отождествляли с титаном Тифоном — чудовищным противником олимпийских богов.</div>
+
+    <h2 id="conclusion">Заключение</h2>
+    <p>Сет представляет собой архетипическую фигуру бога разрушительных сил, которые, однако, необходимы для поддержания баланса мироздания. Он был не просто богом зла, а олицетворением необходимого хаоса, буйной и неконтролируемой силы природы, без которой невозможен был бы и порядок. Его двойственная природа — защитник солнца и убийца Осириса — делает его одним из самых глубоких и сложных персонажей во всей мифологии Древнего Египта.</p>
+
+    <hr>
+    <p><em>Доклад подготовлен на основе изучения древнеегипетских мифов и религиозных текстов.</em></p></p>
+    </section>
+  </div>
+</main>
+
+<!-- Подвал -->
+<footer>
+  <div class="container">
+    <p>&copy; 2025 MaximX408. Лицензия CCO 1.0.</p>
+  </div>
+</footer>
+
+<!-- JS для dropdown -->
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    // Для мобильных — клик по пунктам dropdown
+    if (window.innerWidth <= 768) {
+      document.querySelectorAll('.dropdown > a').forEach(function(link) {
+        link.addEventListener('click', function(e) {
+          e.preventDefault();
+          const dropdownMenu = this.nextElementSibling;
+          const isShown = dropdownMenu.style.display === 'block';
+
+          // Скрыть все dropdown
+          document.querySelectorAll('.dropdown .dropdown-content').forEach(function(menu) {
+            menu.style.display = 'none';
+          });
+          // Показать/скрыть текущий
+          dropdownMenu.style.display = isShown ? 'none' : 'block';
+        });
+      });
+    }
+
+    // Закрытие dropdown при клике вне
+    document.addEventListener('click', function(e) {
+      document.querySelectorAll('.dropdown .dropdown-content').forEach(function(menu) {
+        if (!menu.parentElement.contains(e.target)) {
+          menu.style.display = 'none';
+        }
+      });
+    });
+  });
+</script>
+
+</body>
+</html>
