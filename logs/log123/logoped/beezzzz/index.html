@@ -1,1 +1,277 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>ПРОСТО САЙТ</title>
+<meta name="description" content="ПРОСТО САЙТ" />
 
+<!-- CSS стили -->
+<style>
+  /* Общий сброс и базовые стили */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f4f4;
+  }
+
+  /* Шапка сайта */
+  header {
+    background-color: #2c3e50;
+    color: white;
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+
+  .container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+
+  /* Навигационные ссылки */
+  .nav-links {
+    list-style: none;
+    display: flex;
+    align-items: center;
+  }
+
+  .nav-links > li {
+    position: relative;
+    margin-left: 2rem;
+  }
+
+  .nav-links a {
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    display: block;
+    transition: color 0.3s;
+  }
+
+  .nav-links a:hover {
+    color: #3498db;
+  }
+
+  /* Выпадающее меню */
+  .dropdown {
+    position: relative;
+  }
+
+  .dropdown > a::after {
+    content: " ▼";
+    font-size: 0.7em;
+  }
+
+  .dropdown-content {
+    display: none; /* по умолчанию скрыто */
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #2c3e50;
+    min-width: 200px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    border-radius: 0 0 4px 4px;
+    z-index: 1000;
+  }
+
+  .dropdown-content li {
+    width: 100%;
+  }
+
+  .dropdown-content a {
+    padding: 12px 16px;
+    color: white;
+    text-decoration: none;
+    display: block;
+    border-bottom: 1px solid #34495e;
+  }
+
+  .dropdown-content a:hover {
+    background-color: #3498db;
+  }
+
+  /* Показывать при hover */
+  @media (hover: hover) {
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+  }
+
+  /* Адаптивность для мобильных устройств */
+  @media(max-width: 768px) {
+    .nav-links {
+      flex-direction: column;
+      width: 100%;
+    }
+
+    .nav-links > li {
+      margin: 0.5rem 0;
+    }
+
+    /* Сделать dropdown по клику */
+    .dropdown > a::after {
+      content: "";
+    }
+
+    .dropdown .dropdown-content {
+      position: static;
+      display: none;
+      width: 100%;
+    }
+  }
+
+  /* Основной контент */
+  main {
+    padding: 2rem 0;
+    min-height: calc(100vh - 200px);
+  }
+
+  section {
+    margin-bottom: 2rem;
+    padding: 2rem;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  }
+
+  /* Подвал */
+  footer {
+    background-color: #34495e;
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+    margin-top: 2rem;
+  }
+</style>
+</head>
+<body>
+
+<!-- Шапка сайта -->
+<header>
+  <div class="container">
+    <nav>
+      <div class="logo">ПРОСТО САЙТ</div>
+      <ul class="nav-links">
+        <li><a href="https://maximx408.github.io/">Главная</a></li>
+        <li class="dropdown">
+          <a href="#geography">География</a>
+          <ul class="dropdown-content">
+            <li><a href="https://maximx408.GitHub.io/projects/geography/Luna/index.html" target="_blank">Почему луна влияет на приливы и отливы?</a></li>
+            <li><a href="#" target="_blank">~</a></li>
+            <li><a href="#" target="_blank">~</a></li>
+            <li><a href="#" target="_blank">~</a></li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a href="#Biology">Биология</a>
+          <ul class="dropdown-content">
+            <li><a href="#" target="_blank">~</a></li>
+            <li><a href="#" target="_blank">~</a></li>
+            <li><a href="#" target="_blank">~</a></li>
+            <li><a href="#" target="_blank">~</a></li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a href="#History">История</a>
+          <ul class="dropdown-content">
+            <li><a href="https://maximx408.github.io/projects/history/15kopeek1952g/index.html" target="_blank">15 копеек 1962г</a></li>
+            <li><a href="https://maximx408.GitHub.io/projects/history/set/index.html" target="_blank">Сэт</a></li>
+            <li><a href="#" target="_blank">~</a></li>
+            <li><a href="#" target="_blank">~</a></li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a href="#Physics">Физика</a>
+          <ul class="dropdown-content">
+            <li><a href="#" target="_blank">~</a></li>
+            <li><a href="#" target="_blank">~</a></li>
+            <li><a href="#" target="_blank">~</a></li>
+            <li><a href="#" target="_blank">~</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<!-- Основное содержимое -->
+<main>
+  <div class="container">
+    <!-- Герой секция -->
+    <section id="home">
+      <h1>Пчелиная линия</h1><br>
+    <video width="640" height="360" controls>
+  <source src="bee-line-2025.mp4" type="video/mp4">
+  Ваш браузер не поддерживает видео тег.
+    </video></p>
+    </section>
+  </div>
+</main>
+
+<!-- Подвал -->
+<footer>
+  <div class="container">
+    <p>&copy; 2025 MaximX408. Лицензия CCO 1.0.</p>
+  </div>
+</footer>
+
+<!-- JS для dropdown -->
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    // Для мобильных — клик по пунктам dropdown
+    if (window.innerWidth <= 768) {
+      document.querySelectorAll('.dropdown > a').forEach(function(link) {
+        link.addEventListener('click', function(e) {
+          e.preventDefault();
+          const dropdownMenu = this.nextElementSibling;
+          const isShown = dropdownMenu.style.display === 'block';
+
+          // Скрыть все dropdown
+          document.querySelectorAll('.dropdown .dropdown-content').forEach(function(menu) {
+            menu.style.display = 'none';
+          });
+          // Показать/скрыть текущий
+          dropdownMenu.style.display = isShown ? 'none' : 'block';
+        });
+      });
+    }
+
+    // Закрытие dropdown при клике вне
+    document.addEventListener('click', function(e) {
+      document.querySelectorAll('.dropdown .dropdown-content').forEach(function(menu) {
+        if (!menu.parentElement.contains(e.target)) {
+          menu.style.display = 'none';
+        }
+      });
+    });
+  });
+</script>
+
+</body>
+</html>
